@@ -1,0 +1,60 @@
+body {
+  background-color: darkblue;
+  color: #000;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 25px 10%;
+  margin: 10px;
+}
+nav a {
+  background-color: darkblue;
+  color: #000;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 22px;
+  transition: 0.3s;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 25px 10%;
+  margin: 10px;
+}
+
+.card {
+  text-align: center;
+  max-width: 800px;
+  margin: 10px;
+  padding: 11px;
+  backdrop-filter: blur(25px);
+  background-color: #000;
+  color: #000;
+  border: 41px;
+  border-radius: 11px;
+  transition: all;
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 33px gray;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 22px;
+}
+.feature {
+  background-color: #000;
+  border-radius: 54px;
+  backdrop-filter: blur(11px);
+  padding: 22px;
+}

@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #6c63ff;
+  --secondary: #8b5cf6;
+  --dark: #111827;
+  --light: #ffffff;
+  --gray: #f5f7fa;
+}
+
+body {
+  background: var(--light);
+  color: #222;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 70px;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 25px 0;
+  max-width: 600px;
+}
+
+.btn-primary {
+  background: white;
+  color: #333;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+/* Loader */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hideLoader 0.5s ease 2s forwards;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #6c63ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hideLoader {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.glow {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(108, 99, 255, 0.9);
+  }
+}
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark header {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+body.dark .card,
+body.dark .team-card,
+body.dark .gallery-item,
+body.dark .stat-card {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark .menu a {
+  color: white;
+}
+
+body.dark footer {
+  background: #020617;
+}
+
+.advanced-stats {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.stat-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box h2 {
+  font-size: 50px;
+  color: #6c63ff;
+}
+
+.gallery {
+  padding: 120px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  transition: 0.4s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.team {
+  padding: 120px 0;
+  background: #f1f5f9;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 42px;
+}
+
+footer {
+  padding: 80px 0;
+  background: #111827;
+  color: white;
+}
