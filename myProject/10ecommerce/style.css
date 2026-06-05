@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f7f8fc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #111827;
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://picsum.photos/1600/900");
+  background-size: cover;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background: #ff6b35;
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 40px;
+}
+
+.categories,
+.products {
+  padding: 80px 8%;
+}
+
+.categories h2,
+.products h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card h3,
+.product-card p {
+  padding: 10px 20px;
+}
+
+.product-card button {
+  margin: 20px;
+  padding: 12px 20px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 80px 8%;
+  background: #111827;
+  color: white;
+}
+
+.newsletter input {
+  padding: 15px;
+  width: 300px;
+  max-width: 90%;
+  margin: 20px 10px;
+}
+
+.newsletter button {
+  padding: 15px 25px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}

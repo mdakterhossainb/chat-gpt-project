@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f8fafc;
+}
+
+.navbar {
+  background: #006a4e;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 15px 35px;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: #006a4e;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+form {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button {
+  padding: 15px;
+  background: #006a4e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
